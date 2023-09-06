@@ -14,7 +14,7 @@ const LoginForm = () => {
         const { username, password } = formData;
 
         try {
-            const response = await axios.post('/login', { username, password });
+            const response = await axios.post('https://cardz-galore-app-backend-cb5253dcc4a1.herokuapp.com/login', { username, password });
 
             if (response.status === 200) {
                 login(response.data.user);

@@ -21,7 +21,7 @@ const SearchResultsPage = ({ searchResults, setSearchResults }) => {
 
         try {
             
-            const response = await axios.post('/add-to-cart', {
+            const response = await axios.post('https://cardz-galore-app-backend-cb5253dcc4a1.herokuapp.com/add-to-cart', {
                 userId: auth.user._id,
                 cardId,
                 setId,

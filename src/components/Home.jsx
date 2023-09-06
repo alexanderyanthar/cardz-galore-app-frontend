@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import HeroSection from './HeroSection';
 import ImageCarousel from './ImageCarousel';
-import image1 from '../assets/promo-banner-placeholder.png';
+import image1 from '../assets/promo-banner-placeholder1.png';
 import image2 from '../assets/promo-banner-placeholder.png';
 import image3 from '../assets/promo-banner-placeholder.png';
 import image4 from '../assets/promo-banner-placeholder.png';

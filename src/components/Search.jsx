@@ -38,8 +38,7 @@ const Search = ({ searchResults, setSearchResults }) => {
 
 const handleSuggestionClick = async (suggestion) => {
   try {
-    // const response = await axios.get(`https://cardz-galore-app-backend-cb5253dcc4a1.herokuapp.com/api/cards/search?q=${encodeURIComponent(suggestion)}`);
-    const response = await axios.get(`http://localhost:5000/api/cards/search?q=${encodeURIComponent(suggestion)}`);
+    const response = await axios.get(`https://cardz-galore-app-backend-cb5253dcc4a1.herokuapp.com/api/cards/search?q=${encodeURIComponent(suggestion)}`);
     setSearchResults(response.data); // Populate searchResults state with the fetched card details
     navigate('/search-results'); // Navigate to the search results page
   } catch (err) {
@@ -51,8 +50,7 @@ const handleSuggestionClick = async (suggestion) => {
   // New function to fetch suggestions
   const fetchSuggestions = async () => {
     try {
-      // const response = await axios.get(`https://cardz-galore-app-backend-cb5253dcc4a1.herokuapp.com/api/cards/suggestions?q=${encodeURIComponent(searchQuery)}`);
-      const response = await axios.get(`http://localhost:5000/api/cards/suggestions?q=${encodeURIComponent(searchQuery)}`);
+      const response = await axios.get(`https://cardz-galore-app-backend-cb5253dcc4a1.herokuapp.com/api/cards/suggestions?q=${encodeURIComponent(searchQuery)}`);
       setSuggestions(response.data);
     } catch (err) {
       console.error('Error fetching suggestions:', err);

@@ -17,7 +17,6 @@ const SearchAndAdjustQuantity = () => {
     try {
       const response = await axios.get(`https://cardz-galore-app-backend-cb5253dcc4a1.herokuapp.com/api/cards/suggestions?q=${encodeURIComponent(searchQuery)}`);
       setSearchSuggestions(response.data);
-      console.log(searchSuggestions);
     } catch(err) {
       console.error('Error fetchin search suggestions:', err);
     }
@@ -80,7 +79,6 @@ const SearchAndAdjustQuantity = () => {
 
   useEffect(() => {
     const handleClickOutside = (e) => {
-      console.log('Clicked:', e.target); // Log the clicked element
       if (!e.target.closest('.search-container')) {
         setShowSearchResults(false);
         setSearchQuery('');

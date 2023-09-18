@@ -2,7 +2,6 @@ import React from 'react'
 import axios from 'axios';
 import AuthForm from './AuthForm';
 import { useNavigate } from 'react-router-dom';
-import LogoutButton from '../../components/LogoutButton';
 import { useAuth } from '../../contexts/AuthContext';
 import { toast } from 'react-toastify';
 

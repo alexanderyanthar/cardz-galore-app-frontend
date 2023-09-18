@@ -14,6 +14,7 @@ import CartPage from "./pages/CartPage";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import NotFound from './pages/NotFoundPage';
+import Footer from "./components/Footer";
 
 
 
@@ -28,7 +29,7 @@ function App() {
   return (
     <AuthProvider>
       {shouldRenderHeader && (
-        <Header searchResults={searchResults} setSearchResults={setSearchResults} />
+          <Header searchResults={searchResults} setSearchResults={setSearchResults} />
       )}
       <Routes>
         <Route path='/' element={<Home />} />

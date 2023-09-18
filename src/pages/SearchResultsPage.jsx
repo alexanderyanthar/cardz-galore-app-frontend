@@ -1,21 +1,19 @@
-import React, { useContext, useState, useEffect } from 'react'
-import { AuthContext, useAuth } from '../contexts/AuthContext';
+import React, { useContext, useState } from 'react'
+import { AuthContext } from '../contexts/AuthContext';
 import axios from 'axios';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 const SearchResultsPage = ({ searchResults, setSearchResults }) => {
     const auth = useContext(AuthContext);
     const [selectedQuantity, setSelectedQuantity] = useState({});
-    const { updatedQuantities, setUpdatedQuantities } = useAuth();
 
     const handleAddToCart = async (e, card, set) => {
         e.preventDefault();
 
         const setId = set._id;
         const cardId = card._id;
-        console.log('the user', auth.user);
 
         const addToCartQuantity = selectedQuantity[setId] || 0;
 
@@ -29,7 +27,7 @@ const SearchResultsPage = ({ searchResults, setSearchResults }) => {
             });
 
             if (response.status === 200) {
-                const updatedQuantity = response.data.updatedQuantity;
+                // const updatedQuantity = response.data.updatedQuantity;
                 
                 // Display toast notification
                 toast.success('Item added to cart successfully!');
@@ -48,13 +46,6 @@ const SearchResultsPage = ({ searchResults, setSearchResults }) => {
         [setId]: quantity,
         }));
     };
-
-    useEffect(() => {
-        // This effect will run whenever updatedQuantities changes
-        console.log('updatedQuantities changed:', updatedQuantities);
-    }, [updatedQuantities]);
-
-
 
   return (
     <>

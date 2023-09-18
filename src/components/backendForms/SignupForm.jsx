@@ -10,7 +10,6 @@ const SignupForm = () => {
 
     const handleSignup = async (formData) => {
         const { username, password } = formData;
-        console.log('form data', formData)
         
         // Regex requirements for username and password
         const usernameRegex = /^[a-zA-Z0-9_]{4,16}$/;
@@ -19,13 +18,11 @@ const SignupForm = () => {
 
 
         if (!usernameRegex.test(username)) {
-            console.log('username', username)
             toast.error('Username must be 4-16 characters long and can only contain letters, numbers, and underscores')
             return;
         }
 
         if (!passwordRegex.test(password)) {
-            console.log('password', password)
             toast.error('Password must be at least 8 characters long, contain at least one lowercase letter, one uppercase letter, one digit, and one special character.');
             return;
         }

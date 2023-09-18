@@ -3,10 +3,6 @@ import { AuthContext } from '../contexts/AuthContext';
 import LogoutButton from './LogoutButton';
 import userLogo from '../assets/user-logo.svg'
 
-
-
-
-
 const AuthButton = () => {
     const auth = useContext(AuthContext);
 

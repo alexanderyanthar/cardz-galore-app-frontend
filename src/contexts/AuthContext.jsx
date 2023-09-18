@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useRef, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
 
 export const AuthContext = createContext();
@@ -36,13 +36,11 @@ export const AuthProvider = ({ children }) => {
     const login = (userData) => {
         // implement your login logic here and set user state.
         setUser(userData);
-        console.log('user logged in', userData)
     };
 
     const logout = () => {
         // IMplenet logout logic
         setUser(null);
-        console.log('user logged out');
     };
 
     const contextValue = {

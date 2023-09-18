@@ -1,4 +1,3 @@
-import React, { useContext } from 'react'
 import HeroSection from './HeroSection';
 import ImageCarousel from './ImageCarousel';
 import image1 from '../assets/promo-banner-placeholder1.png';

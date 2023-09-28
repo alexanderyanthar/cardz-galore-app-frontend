@@ -5,7 +5,7 @@ import cancelSearch from '../assets/cancel-search-icon.svg';
 import { useNavigate } from 'react-router-dom';
 import { toast} from 'react-toastify';
 
-
+// random change
 const Search = ({ searchResults, setSearchResults }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]); // New state for suggestions
